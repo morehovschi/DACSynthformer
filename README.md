@@ -1,3 +1,8 @@
+# Our contribution
+An end-to-end script to acquire sounds from Freesound and format them for training the DACSynthformer on them
+("Data.ipynb").
+
+Original DACSynthformer README below:
 # DACSynthformer
 
 DACSynthformer is a basic transformer that runs on the Descript Audio Codec representation of audio. It maintains the "stacked" codebook at each transformer time step (as oppose to laying the codebooks down "horizonally" for examaple). It uses a smallish causal mask during training, so that during autoregressive inference we can use a small context window. It uses RoPE positional encoding because absolute positions are irrelevant for the continuous and stable audio textures we wish to generate. Conditioning is provided as a vector combining a one-hot segment for sound class, and real number(s) for parameters.
